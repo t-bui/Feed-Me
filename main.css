@@ -64,11 +64,19 @@ li a {
     background-color: #dddddd;
     padding: 14px 16px;
     text-decoration: none;
+    color: blue;
 }
 
-/*
-#image, img {
-  width: 100%;
+
+#image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-*/
+
+
+#happening h2 {
+  text-align: left;
+  
+}
 
