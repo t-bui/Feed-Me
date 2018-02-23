@@ -22,7 +22,7 @@
         
       </header>
         
-      <p>Sign</p>
+      <p>Sign Up</p>
         
         
       <footer>
@@ -30,5 +30,51 @@
         
     </body>
 
+    <script type="text/javascript">
+      function validateForm() {
+        var my_form = document.forms["my_form"];
 
+        //check Name is not empty
+        var x = my_form["Name"].value;
+        if(x == "") {
+          alert("Name field must be filled out!");
+          return false;
+        }
+
+        //Check email is not empty, contains @ and .edu
+        x = my_form["Email"].value
+        if(x == "") {
+          alert("Email field must be filled out!");
+          return false;
+        }
+        if(!validateEmail(x)) {
+          alert("Email must be a valid .edu address!");
+        }
+    
+      }
+  
+      function validateEmail(email) {
+        //checks email is of the form:
+        //[chars]@[chars].edu
+        //from http://stackoverflow.com/questions/26702338/setting-a-form-to-only-allow-edu-email-addresses
+        var regex = /^([\w-]+(?:\.[\w-]+)*)@(virginia+\.)+edu/i;
+        return regex.test(email);
+      }
+
+    </script>
+    <div id = "main" class="form">
+      <form name="my_form" onsubmit="return validateForm()" <!––action="formHandler.php"method="post"––> 
+        Name: <input type="text" name="Name" />
+        <br />
+        <br />
+        Email: <input type="text" name="Email" />
+        <br />
+        <br />
+        Password: <input type = "Password" name="pass"/>
+        <br />
+
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
 </html>
