@@ -57,20 +57,22 @@
         //checks email is of the form:
         //[chars]@[chars].edu
         //from http://stackoverflow.com/questions/26702338/setting-a-form-to-only-allow-edu-email-addresses
+       // <!––action="formHandler.php"method="post"––>  goes below in form div
+
         var regex = /^([\w-]+(?:\.[\w-]+)*)@(virginia+\.)+edu/i;
         return regex.test(email);
       }
 
     </script>
     <div id = "main" class="form">
-      <form name="my_form" onsubmit="return validateForm()" <!––action="formHandler.php"method="post"––> 
-        Name: <input type="text" name="Name" />
+      <form name="my_form" onsubmit="return validateForm()" />
+        Name: <input type="text" name="Name" class = "inputform" />
         <br />
         <br />
-        Email: <input type="text" name="Email" />
+        Email: <input type="text" name="Email" class = "inputform" />
         <br />
         <br />
-        Password: <input type = "Password" name="pass"/>
+        Password: <input type = "Password" name="pass" class = "inputform" />
         <br />
 
         <br />
