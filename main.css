@@ -135,7 +135,31 @@ a{
     background-color: #EAF2F8;
 }
 
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px; 
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+}
 
+.eventSquare {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    border: none;
+    background-color: #EAF2F8;
+    box-sizing: border-box;
+}
+
+.eventContent div {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
 /* Containers */
 
 .container {
@@ -145,7 +169,7 @@ a{
     height: 450px;
 }
 
-.button {
+.button { /*button style */
     padding:5px 15px;
     background:none;
     border:1px solid #2980B9;
@@ -171,7 +195,7 @@ input[type=submit] {
     font-family: "Trebuchet MS", Helvetica, sans-serif
 
 }
-input[type=file] {
+input[type=file] { /*input button doesnt show up */
     display: none;
 
 }
